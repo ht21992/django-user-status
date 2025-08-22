@@ -37,6 +37,12 @@ Load the template tags in your templates:
 {% load user_status_tags %}
 ```
 
+to use the template tags you need to add "django_user_status" to your INSTALLED_APPS
+
+```
+django_user_status
+```
+
 Configuration (Optional)
 You can customize the package's behavior by adding the following settings to your settings.py file.
 
