@@ -15,6 +15,22 @@ A simple Django package to track and display a user's online/offline status and 
    ]
    ```
 
+redis example in settings.py (if you are using redis)
+
+```
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://user:password@localhost:6379",
+        "OPTIONS": {
+
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
+
+```
+
 Load the template tags in your templates:
 
 ```
@@ -50,7 +66,7 @@ To show the last seen time:
 {% get_last_seen user %}
 ```
 
-What's New in Version 0.1.1
+What's New in Version 0.1.2
 
 - Bug Fix: Resolved a TypeError related to timezone-aware and naive datetimes. The package now correctly uses timezone-aware datetimes for all cache and status checks, ensuring reliability.
 

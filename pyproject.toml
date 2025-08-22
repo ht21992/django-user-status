@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-user-status"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Hossein Tajfirouz", email="hosseintajfirouz@gmail.com" },
 ]
@@ -26,6 +26,6 @@ dependencies = [
 Homepage = "https://github.com/ht21992/django-user-status"
 Issues = "https://github.com/ht21992/django-user-status/issues"
 
-[tool.setuptools]
-packages = ["django_user_status"]
-
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["django_user_status*"]
