@@ -49,3 +49,9 @@ To show the last seen time:
 ```
 {% get_last_seen user %}
 ```
+
+What's New in Version 0.1.1
+
+- Bug Fix: Resolved a TypeError related to timezone-aware and naive datetimes. The package now correctly uses timezone-aware datetimes for all cache and status checks, ensuring reliability.
+
+- Added Unit Tests: Comprehensive unit tests have been added to ensure the reliability and correctness of the middleware and template tags.
